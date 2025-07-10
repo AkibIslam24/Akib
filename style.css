@@ -61,9 +61,10 @@ header {
 .incorp {
     font-size: 1.01rem;
     font-weight: 600;
-    color: #8d8cfb;
+    color: #4a4a4a; /* Changed to dark gray for "INCORPORATION" */
     letter-spacing: 2.5px;
     margin-top: 2px;
+    /* margin-left: 2px; removed as it's not needed for column layout */
 }
 .nav-link {
     color: #222 !important;
@@ -115,14 +116,14 @@ header {
     font-size: 3.1rem;
     font-weight: 700;
     color: #222;
-    line-height: 1.13;
+    line-height: 1.25; /* Increased line-height to prevent cutting */
     letter-spacing: -1.2px;
     margin-bottom: 1.1rem;
 }
 .hero-subtitle {
     font-size: 1.05rem;
     font-weight: 500;
-    color: #8d8cfb;
+    color: #4a4a4a; /* Changed to darker color for better visibility */
     letter-spacing: 2.2px;
     text-transform: uppercase;
     margin-bottom: 0.7rem;
@@ -152,13 +153,22 @@ header {
     transition: border 0.2s;
     padding: 0.6rem 1.2rem;
     height: 44px;
+    /* Custom styles for dropdown arrow */
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23444" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Simple down arrow SVG */
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.8em auto, 100%;
+    padding-right: 2.5em; /* Make space for the arrow */
 }
 .hero-form .form-select:focus {
     border-color: #8d8cfb;
     box-shadow: 0 0 0 2px #e6e6fa;
 }
 .btn-plans {
-    background: #ff5a5f;
+    background: #6c63ff; /* Changed to blue */
     color: #fff;
     font-weight: 600;
     border-radius: 8px;
@@ -170,14 +180,14 @@ header {
     margin-left: 4px;
 }
 .btn-plans:hover {
-    background: #e14b50;
+    background: #8d8cfb; /* Slightly lighter blue on hover */
 }
 .hero-img-svg {
     max-width: 480px;
     min-width: 320px;
     margin-left: auto;
 }
-.hero-section img[alt="decorative shape"] {
+.hero-section img[alt=""] { /* Targeting images with empty alt for decorative shapes */
     width: 120px;
     z-index: 1;
     opacity: 0.7;
@@ -263,6 +273,27 @@ header {
     color: #888;
     font-size: 1rem;
 }
+
+/* Feature Icons */
+.feature-icon {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto 15px auto; /* Center the icon */
+}
+
+.icon-focused-vision {
+    background-image: url('path/to/focused-vision-icon.svg'); /* Placeholder: Replace with actual path */
+}
+.icon-collaboration {
+    background-image: url('path/to/collaboration-icon.svg'); /* Placeholder: Replace with actual path */
+}
+.icon-consistent-delivery {
+    background-image: url('path/to/consistent-delivery-icon.svg'); /* Placeholder: Replace with actual path */
+}
+
 
 /* Services Section */
 .services-section .card {
